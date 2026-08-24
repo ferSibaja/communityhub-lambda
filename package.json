@@ -1,10 +1,17 @@
 {
   "name": "communityhub-lambda",
   "version": "1.0.0",
-  "description": "CommunityHub Serverless Notifications Function",
+  "description": "CommunityHub Serverless Notifications & Statistics Report Functions",
   "main": "index.js",
+  "scripts": {
+    "pack": "node pack_and_upload.js",
+    "deploy": "node deploy.js",
+    "deploy:report": "node deploy_report.js",
+    "check-aws": "node check_aws.js"
+  },
   "dependencies": {
     "@aws-sdk/client-eventbridge": "^3.1114.0",
+    "@aws-sdk/client-iam": "^3.1114.0",
     "@aws-sdk/client-lambda": "^3.1114.0",
     "mongoose": "^8.24.3"
   },
